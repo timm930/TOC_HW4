@@ -1,13 +1,13 @@
 /*
 	file name: TocHW4.java
-	name: �L�ʫ�
+	name: 林廷彥
 	student id: F74002159
 	description:
-		class 'Road'�ΨӬ����C�������S�ʡA�]�t���W�B�̤j�̤p�������B�����X�{�������M�䦸�ơA�̭����F�U��variable��get�Bset function�~�A�٦�'Road()'�ΨӪ��l�ơA
-		�@�}�l���̤j�������]��0�B�̤p�������g�{30000000�A'setRoad'�Φb�Ĥ@���O���A�h�F���W�o�ӰѼơA'addMonth'�N�ΨӰO�����X�{�L�����q�A���F�����������������~�A�٭n�O���������B
-		�A��'changePrice'�Ӹ��̤j�̤p�Ȱ������M�ܰʡC
-		'main' �̡A�@�}�l�qprogram��1�ӰѼ�Ū��url�A�U�����ƨ�data.json�A�����AŪ�ҩ��J�@json array�A�������W�ϧ_�����L�A�o�̸��W�]�AXX���BXX�ѩMXX���A����json array
-		�O�������A�A���X���������̦h���������q�A�L�X���W�M�̤j�̤p�����q�C
+		class 'Road'用來紀錄每條路的特性，包含路名、最大最小交易價、交易出現的月份和其次數，裡面除了各個variable的get、set function外，還有'Road()'用來初始化，
+		一開始的最大交易價設為0、最小交易價射程30000000，'setRoad'用在第一次記錄，多了路名這個參數，'addMonth'就用來記錄有出現過的路段，除了紀錄路的交易月份外，還要記錄交易金額
+		，用'changePrice'來跟最大最小值做比較和變動。
+		'main' 裡，一開始從program第1個參數讀取url，下載資料到data.json，之後再讀黨放入一json array，比較路名使否紀錄過，這裡路名包括XX路、XX巷和XX街，整個json array
+		記錄完後，再找出交易月份最多月份的路段，印出路名和最大最小交易量。
 */
 import org.json.*;
 
@@ -141,7 +141,7 @@ public class TocHw4 {
 	        try {
 	            URL url_address = new URL( url );
 	            
-	            // Ū�J����(�r�����y)            
+	            // 讀入網頁(字元串流)            
 	            BufferedReader br = new BufferedReader(new InputStreamReader(url_address.openStream(), "UTF-8"));
 	            //BufferedReader br = new BufferedReader(new InputStreamReader(url_address.openStream(), "Big5"));
 	            BufferedWriter bw = new BufferedWriter(new FileWriter("data.json", false));    
@@ -167,16 +167,16 @@ public class TocHw4 {
 	        for(int i=0; i<buf_max; i++) {
 	        	road[i] = new Road();
 	        }
-	        Pattern p = Pattern.compile(".*[��|��|��]");
+	        Pattern p = Pattern.compile(".*[路|街|巷]");
 	        Matcher matcher = null;
-	        //Matcher matcher = p.matcher("�ڬO�n�n��22��");
+	        //Matcher matcher = p.matcher("我是好好街22號");
 	        //System.out.println("find: "+matcher.find());
 	        //System.out.printf("result: %s\n", matcher.group(0));
 	        
 	        /* put the object to its road */
 	        int roadCtr = 0;
 	        for(int i=0; i<jsonRealPrice.length(); i++) {
-	        	matcher = p.matcher(jsonRealPrice.getJSONObject(i).getString("�g�a�Ϭq���m�Ϋت��Ϫ��P"));
+	        	matcher = p.matcher(jsonRealPrice.getJSONObject(i).getString("土地區段位置或建物區門牌"));
 	        	if(matcher.find()) { //System.out.printf("Got one!!!\n");
 	        		boolean newFlag = true;			// check if it's a new road
 	        		for(int j=0; j<roadCtr+1; j++) {
@@ -186,30 +186,30 @@ public class TocHw4 {
 	        			
 	        			//String matchName = matcher.group(0);
 	        			if(matcher.group(0).equals(road[j].getName())) { 
-	        				road[j].addMonth(jsonRealPrice.getJSONObject(i).getInt("�`����"), 
-	        						jsonRealPrice.getJSONObject(i).getInt("�����~��"));
-	        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("�`����")+";"+
-	        						//jsonRealPrice.getJSONObject(i).getInt("�����~��"));
+	        				road[j].addMonth(jsonRealPrice.getJSONObject(i).getInt("總價元"), 
+	        						jsonRealPrice.getJSONObject(i).getInt("交易年月"));
+	        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("總價元")+";"+
+	        						//jsonRealPrice.getJSONObject(i).getInt("交易年月"));
 	        				newFlag = false;
 	        					
 	        			}
 	        			/*else if(j==(buf_max-1)) {
 	        				System.out.printf("Got new road!!!\n");
 	        				roadCtr++;
-	        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("�`����"), 
-	        						jsonRealPrice.getJSONObject(i).getInt("�����~��"));
-	        				System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("�`����")+";"+
-	        						jsonRealPrice.getJSONObject(i).getInt("�����~��"));
+	        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("總價元"), 
+	        						jsonRealPrice.getJSONObject(i).getInt("交易年月"));
+	        				System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("總價元")+";"+
+	        						jsonRealPrice.getJSONObject(i).getInt("交易年月"));
 	        			}*/
 	        				
 	        		}
 	        		if(newFlag) {
 	        			//System.out.printf("Got new road!!!\n");
         				roadCtr++;
-        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("�`����"), 
-        						jsonRealPrice.getJSONObject(i).getInt("�����~��"));
-        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("�`����")+";"+
-        				//		jsonRealPrice.getJSONObject(i).getInt("�����~��"));
+        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("總價元"), 
+        						jsonRealPrice.getJSONObject(i).getInt("交易年月"));
+        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("總價元")+";"+
+        				//		jsonRealPrice.getJSONObject(i).getInt("交易年月"));
 	        		}
 	        	}
 	        	
@@ -225,7 +225,7 @@ public class TocHw4 {
 	        
 	        for(int i=0; i<buf_max; i++) {
 	        	if(road[i].getMonNum()==maxNum)
-	        		System.out.printf("%s, �̰�������: %d, �̧C������: %d\n", road[i].getName(), road[i].getMax(), 
+	        		System.out.printf("%s, 最高成交價: %d, 最低成交價: %d\n", road[i].getName(), road[i].getMax(), 
 	    	        		road[i].getMin());
 	        }
 	        
