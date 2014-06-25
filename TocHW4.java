@@ -17,7 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.lang.String;
 
-public class TocHW4 {
+public class TocHw4 {
 	public static class Road{
 		private String roadName;
 		private int maxPrice;
