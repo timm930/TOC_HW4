@@ -1,13 +1,13 @@
 /*
 	file name: TocHW4.java
-	name: ªL§Ê«Û
+	name: ï¿½Lï¿½Ê«ï¿½
 	student id: F74002159
 	description:
-		class 'Road'¥Î¨Ó¬ö¿ý¨C±ø¸ôªº¯S©Ê¡A¥]§t¸ô¦W¡B³Ì¤j³Ì¤p¥æ©ö»ù¡B¥æ©ö¥X²{ªº¤ë¥÷©M¨ä¦¸¼Æ¡A¸Ì­±°£¤F¦U­Óvariableªºget¡Bset function¥~¡AÁÙ¦³'Road()'¥Î¨Óªì©l¤Æ¡A
-		¤@¶}©lªº³Ì¤j¥æ©ö»ù³]¬°0¡B³Ì¤p¥æ©ö»ù®gµ{30000000¡A'setRoad'¥Î¦b²Ä¤@¦¸°O¿ý¡A¦h¤F¸ô¦W³o­Ó°Ñ¼Æ¡A'addMonth'´N¥Î¨Ó°O¿ý¦³¥X²{¹Lªº¸ô¬q¡A°£¤F¬ö¿ý¸ôªº¥æ©ö¤ë¥÷¥~¡AÁÙ­n°O¿ý¥æ©öª÷ÃB
-		¡A¥Î'changePrice'¨Ó¸ò³Ì¤j³Ì¤p­È°µ¤ñ¸û©MÅÜ°Ê¡C
-		'main' ¸Ì¡A¤@¶}©l±qprogram²Ä1­Ó°Ñ¼ÆÅª¨úurl¡A¤U¸ü¸ê®Æ¨ìdata.json¡A¤§«á¦AÅªÄÒ©ñ¤J¤@json array¡A¤ñ¸û¸ô¦W¨Ï§_¬ö¿ý¹L¡A³o¸Ì¸ô¦W¥]¬AXX¸ô¡BXX«Ñ©MXXµó¡A¾ã­Ójson array
-		°O¿ý§¹«á¡A¦A§ä¥X¥æ©ö¤ë¥÷³Ì¦h¤ë¥÷ªº¸ô¬q¡A¦L¥X¸ô¦W©M³Ì¤j³Ì¤p¥æ©ö¶q¡C
+		class 'Road'ï¿½Î¨Ó¬ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Sï¿½Ê¡Aï¿½]ï¿½tï¿½ï¿½ï¿½Wï¿½Bï¿½Ì¤jï¿½Ì¤pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Mï¿½ä¦¸ï¿½Æ¡Aï¿½Ì­ï¿½ï¿½ï¿½ï¿½Fï¿½Uï¿½ï¿½variableï¿½ï¿½getï¿½Bset functionï¿½~ï¿½Aï¿½Ù¦ï¿½'Road()'ï¿½Î¨Óªï¿½ï¿½lï¿½Æ¡A
+		ï¿½@ï¿½}ï¿½lï¿½ï¿½ï¿½Ì¤jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½0ï¿½Bï¿½Ì¤pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½{30000000ï¿½A'setRoad'ï¿½Î¦bï¿½Ä¤@ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½Aï¿½hï¿½Fï¿½ï¿½ï¿½Wï¿½oï¿½Ó°Ñ¼Æ¡A'addMonth'ï¿½Nï¿½Î¨Ó°Oï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½{ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½qï¿½Aï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½Aï¿½Ù­nï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
+		ï¿½Aï¿½ï¿½'changePrice'ï¿½Ó¸ï¿½ï¿½Ì¤jï¿½Ì¤pï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Mï¿½Ü°Ê¡C
+		'main' ï¿½Ì¡Aï¿½@ï¿½}ï¿½lï¿½qprogramï¿½ï¿½1ï¿½Ó°Ñ¼ï¿½Åªï¿½ï¿½urlï¿½Aï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½Æ¨ï¿½data.jsonï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½AÅªï¿½Ò©ï¿½ï¿½Jï¿½@json arrayï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Ï§_ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½Aï¿½oï¿½Ì¸ï¿½ï¿½Wï¿½]ï¿½AXXï¿½ï¿½ï¿½BXXï¿½Ñ©MXXï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½json array
+		ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Aï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¦hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½qï¿½Aï¿½Lï¿½Xï¿½ï¿½ï¿½Wï¿½Mï¿½Ì¤jï¿½Ì¤pï¿½ï¿½ï¿½ï¿½ï¿½qï¿½C
 */
 import org.json.*;
 
@@ -141,7 +141,7 @@ public class TocHw4 {
 	        try {
 	            URL url_address = new URL( url );
 	            
-	            // Åª¤Jºô­¶(¦r¤¸¦ê¬y)            
+	            // Åªï¿½Jï¿½ï¿½ï¿½ï¿½(ï¿½rï¿½ï¿½ï¿½ï¿½ï¿½y)            
 	            BufferedReader br = new BufferedReader(new InputStreamReader(url_address.openStream(), "UTF-8"));
 	            //BufferedReader br = new BufferedReader(new InputStreamReader(url_address.openStream(), "Big5"));
 	            BufferedWriter bw = new BufferedWriter(new FileWriter("data.json", false));    
@@ -167,16 +167,16 @@ public class TocHw4 {
 	        for(int i=0; i<buf_max; i++) {
 	        	road[i] = new Road();
 	        }
-	        Pattern p = Pattern.compile(".*[¸ô|µó|«Ñ]");
+	        Pattern p = Pattern.compile(".*[ï¿½ï¿½|ï¿½ï¿½|ï¿½ï¿½]");
 	        Matcher matcher = null;
-	        //Matcher matcher = p.matcher("§Ú¬O¦n¦nµó22¸¹");
+	        //Matcher matcher = p.matcher("ï¿½Ú¬Oï¿½nï¿½nï¿½ï¿½22ï¿½ï¿½");
 	        //System.out.println("find: "+matcher.find());
 	        //System.out.printf("result: %s\n", matcher.group(0));
 	        
 	        /* put the object to its road */
 	        int roadCtr = 0;
 	        for(int i=0; i<jsonRealPrice.length(); i++) {
-	        	matcher = p.matcher(jsonRealPrice.getJSONObject(i).getString("¤g¦a°Ï¬q¦ì¸m©Î«Øª«°ÏªùµP"));
+	        	matcher = p.matcher(jsonRealPrice.getJSONObject(i).getString("ï¿½gï¿½aï¿½Ï¬qï¿½ï¿½ï¿½mï¿½Î«Øªï¿½ï¿½Ïªï¿½ï¿½P"));
 	        	if(matcher.find()) { //System.out.printf("Got one!!!\n");
 	        		boolean newFlag = true;			// check if it's a new road
 	        		for(int j=0; j<roadCtr+1; j++) {
@@ -186,30 +186,30 @@ public class TocHw4 {
 	        			
 	        			//String matchName = matcher.group(0);
 	        			if(matcher.group(0).equals(road[j].getName())) { 
-	        				road[j].addMonth(jsonRealPrice.getJSONObject(i).getInt("Á`»ù¤¸"), 
-	        						jsonRealPrice.getJSONObject(i).getInt("¥æ©ö¦~¤ë"));
-	        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("Á`»ù¤¸")+";"+
-	        						//jsonRealPrice.getJSONObject(i).getInt("¥æ©ö¦~¤ë"));
+	        				road[j].addMonth(jsonRealPrice.getJSONObject(i).getInt("ï¿½`ï¿½ï¿½ï¿½ï¿½"), 
+	        						jsonRealPrice.getJSONObject(i).getInt("ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½"));
+	        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("ï¿½`ï¿½ï¿½ï¿½ï¿½")+";"+
+	        						//jsonRealPrice.getJSONObject(i).getInt("ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½"));
 	        				newFlag = false;
 	        					
 	        			}
 	        			/*else if(j==(buf_max-1)) {
 	        				System.out.printf("Got new road!!!\n");
 	        				roadCtr++;
-	        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("Á`»ù¤¸"), 
-	        						jsonRealPrice.getJSONObject(i).getInt("¥æ©ö¦~¤ë"));
-	        				System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("Á`»ù¤¸")+";"+
-	        						jsonRealPrice.getJSONObject(i).getInt("¥æ©ö¦~¤ë"));
+	        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("ï¿½`ï¿½ï¿½ï¿½ï¿½"), 
+	        						jsonRealPrice.getJSONObject(i).getInt("ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½"));
+	        				System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("ï¿½`ï¿½ï¿½ï¿½ï¿½")+";"+
+	        						jsonRealPrice.getJSONObject(i).getInt("ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½"));
 	        			}*/
 	        				
 	        		}
 	        		if(newFlag) {
 	        			//System.out.printf("Got new road!!!\n");
         				roadCtr++;
-        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("Á`»ù¤¸"), 
-        						jsonRealPrice.getJSONObject(i).getInt("¥æ©ö¦~¤ë"));
-        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("Á`»ù¤¸")+";"+
-        				//		jsonRealPrice.getJSONObject(i).getInt("¥æ©ö¦~¤ë"));
+        				road[roadCtr].setRoad(matcher.group(0), jsonRealPrice.getJSONObject(i).getInt("ï¿½`ï¿½ï¿½ï¿½ï¿½"), 
+        						jsonRealPrice.getJSONObject(i).getInt("ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½"));
+        				//System.out.println(matcher.group(0)+";"+jsonRealPrice.getJSONObject(i).getInt("ï¿½`ï¿½ï¿½ï¿½ï¿½")+";"+
+        				//		jsonRealPrice.getJSONObject(i).getInt("ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½"));
 	        		}
 	        	}
 	        	
@@ -225,7 +225,7 @@ public class TocHw4 {
 	        
 	        for(int i=0; i<buf_max; i++) {
 	        	if(road[i].getMonNum()==maxNum)
-	        		System.out.printf("%s, ³Ì°ª¦¨¥æ»ù: %d, ³Ì§C¦¨¥æ»ù: %d\n", road[i].getName(), road[i].getMax(), 
+	        		System.out.printf("%s, ï¿½Ì°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: %d, ï¿½Ì§Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: %d\n", road[i].getName(), road[i].getMax(), 
 	    	        		road[i].getMin());
 	        }
 	        
